@@ -23,8 +23,8 @@ describe('Swag Labs', () => {
 
     it('should get login error with performance_glitch_user credentials', async () => {
         await LoginPage.open()
-        await LoginPage.login_performance(process.env.USERNAME_PERFORMANCE, process.env.PASSWORD_SAUCEDEMO)
-        await homePage.validatehomePage()
+        await LoginPage.login(process.env.USERNAME_PERFORMANCE, process.env.PASSWORD_SAUCEDEMO)
+        await homePage.validatehomePageGlitch()
             
     })
 

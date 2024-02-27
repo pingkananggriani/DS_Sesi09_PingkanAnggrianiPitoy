@@ -21,6 +21,11 @@ class homePage extends page {
         await expect(this.iconDogImage).toBeDisplayed()  
     }
 
+    async validatehomePageGlitch(){
+        await expect(browser).toHaveUrlContaining('/inventory.html')
+        await this.iconCart.waitForDisplayed({ timeout: 6000 });
+    }
+
     async validatehomePageError(){
         await expect(browser).toHaveUrlContaining('/inventory.html')
         await this.addCartBackpack.click() //add bacpack

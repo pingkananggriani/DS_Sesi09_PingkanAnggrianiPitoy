@@ -20,14 +20,6 @@ class LoginPage extends page {
         await expect(this.errorLockedOutUser).toBeDisplayed()
     }
 
-
-    async login_performance (username, password) {
-        await this.fieldUsername.waitForDisplayed({ timeout: 6000 });
-        await this.fieldUsername.setValue(username);
-        await this.fieldPassword.setValue(password);
-        await this.buttonLogin.click();
-    }
-
     open () {
         return super.open('/');
     }
